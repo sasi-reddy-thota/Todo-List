@@ -1,0 +1,181 @@
+*,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: monospace;
+}
+
+#container{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 75%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    border-radius: 5px;
+    margin-top: 3%;
+    background-color: antiquewhite;
+    min-width: 430px;
+    padding: 10px;
+
+}
+header{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+#description{
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1%;
+    box-sizing: border-box;
+}
+#catogory-duedate{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+
+}
+#catogory{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 1%;
+}
+#due-date{
+    /* border: 1px solid pink; */
+    border-left: 1px solid black;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 1%;
+}
+.input-box,select{
+    width: 40%;
+    padding: 1%;
+    background-color: inherit;
+    border-radius: 5px;
+}
+#add-delete{
+    /* border: 1px solid hotpink; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add,#delete{
+    position: relative;
+    margin: 1%;
+    border-radius: 6px;
+}
+#add{
+    width: 10%;
+    height: 40%;
+    background-color: #60f660;
+    min-width: 70px;
+}
+#add:hover{
+    background-color: #09f509;
+}
+#delete{
+    background-color: rgb(250, 126, 126);
+    width: 20%;
+    height: 60%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#delete:hover{
+    background-color: red;
+    border: 1px solid black;
+}
+#list-todo{
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    flex-flow: wrap;
+    overflow: scroll;
+    align-items: flex-start;
+}
+.todo-item{
+    /* border: 1px solid black; */
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.todo-item div{
+    display: flex;
+}
+.todo-item div label, .todo-item div input{
+    position: relative;
+    margin: 2% 1%;
+}
+.todo-item div:nth-child(2){
+    position: relative;
+    margin-left: 5%;
+}
+.list{
+    display: flex;
+    height: 25%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+.catogory-name{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 350px;
+}
+.catogory-name h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 60%;
+    border: 1px solid black;
+    background-color: yellowgreen;
+    border-radius: 6px;
+}
+

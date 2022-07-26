@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/style.css">
     <title><%=name%></title>
 </head>
 <body>
-    <h1><%=heading%></h1>
+    <div id="container">
+        <header>
+            <h1>To-Do App</h1>
+        </header>
+        <form action="/listofTodo" method="post">
+            <div id="description">
+                <p><b>DESCRIPTION<span>*</span></b></p>
+                <input type="text" name="name" placeholder="What you want to do?" class="input-box" required>
+            </div>
+            <div id="catogory-duedate">
+                <div id="catogory">
+                    <label for="catogory"><b>CATOGORY<span>*</span></b></label>
+                    <select name="catogory" id="catogory-type" class="input-box" required>
+                        <option value="home">Home</option>
+                        <option value="university">University</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="social">Social</option>
+                    </select>
+                </div>
+                <div id="due-date" >
+                    <label for="due-date"><b>DUE DATE<span>*</span></b></label>
+                    <input type="date" name="date" id="" class="input-box" required>
+                </div>
+    
+            </div>
+            <div id="add-delete">
+                <button type="submit" id="add" class="input-box"><b>Add</b></button>
+            </div>
+        </form>
+        <div id="list-todo">
+            <% for(let i of list){%>
+                <div class="list">
+                    <div class="todo-item">
+                        <div>
+                            <input type="checkbox" name="input" id="">
+                            <label for="input"><%=i.name%></label>
+                        </div>
+                        <div>
+                            <img src="" alt="">
+                            <p><%=i.date%> </p>
+                        </div>
+                    </div>
+                    <div class="catogory-name">
+                        <h3><%=i.catogory%></h3>
+                        <a href="/delete-todo/?id=<%=i._id%> "id="delete" class="input-box"><h4>Delete</h4></a>
+                    </div>
+                </div>
+            <%}%> 
+        </div>
+    </div>
 </body>
 </html>
